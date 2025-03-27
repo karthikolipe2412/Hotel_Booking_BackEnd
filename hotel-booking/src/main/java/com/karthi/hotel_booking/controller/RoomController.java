@@ -35,13 +35,7 @@ public class RoomController {
     private final IRoomService roomService;
     private final BookingService bookingService;
     
-    @Autowired
-    public RoomController(IRoomService roomService, BookingService bookingService) {
-		super();
-		this.roomService = roomService;
-		this.bookingService = bookingService;
-	}
-
+    
 	@PostMapping(value="/add/new-room" , consumes = "multipart/form-data", produces = "application/json")
     @PreAuthorize("hasRole('ROLE_ADMIN')")
     public ResponseEntity<RoomResponse> addNewRoom(
