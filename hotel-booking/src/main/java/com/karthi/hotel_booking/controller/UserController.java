@@ -19,11 +19,7 @@ import java.util.List;
 @RequiredArgsConstructor
 public class UserController {
     private final IUserService userService;			
-    @Autowired
-    public UserController(IUserService userService) {
-		super();
-		this.userService = userService;
-	}
+    
 
 	@GetMapping("/all")
     @PreAuthorize("hasRole('ROLE_ADMIN')")
