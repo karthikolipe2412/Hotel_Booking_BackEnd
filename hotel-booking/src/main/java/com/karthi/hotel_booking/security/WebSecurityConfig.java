@@ -25,12 +25,7 @@ import org.springframework.security.web.authentication.UsernamePasswordAuthentic
 public class WebSecurityConfig {
     private final HotelUserDetailsService userDetailsService;
     private final JwtAuthEntryPoint jwtAuthEntryPoint;
-    @Autowired
-    public WebSecurityConfig(HotelUserDetailsService userDetailsService, JwtAuthEntryPoint jwtAuthEntryPoint) {
-		super();
-		this.userDetailsService = userDetailsService;
-		this.jwtAuthEntryPoint = jwtAuthEntryPoint;
-	}
+    
 	@Bean
     public AuthTokenFilter authenticationTokenFilter(){
         return new AuthTokenFilter();
