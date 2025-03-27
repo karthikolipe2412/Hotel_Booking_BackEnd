@@ -35,13 +35,6 @@ public class AuthController {
     private final JwtUtils jwtUtils;
     private final IUserService userService;
 
-    @Autowired
-    public AuthController(IUserService userService,AuthenticationManager authenticationManager,JwtUtils jwtUtils) {
-        this.userService = userService;
-        this.authenticationManager=authenticationManager;
-        this.jwtUtils=jwtUtils;
-    }
-
 
     @PostMapping("/register-user")
     public ResponseEntity<?> registerUser(@RequestBody User user){
