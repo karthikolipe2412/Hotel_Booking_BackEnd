@@ -28,16 +28,7 @@ public class Room {
 
     @OneToMany(mappedBy="room", fetch = FetchType.LAZY, cascade = CascadeType.ALL)
     private List<BookedRoom> bookings;
-    public Room(Long id, String roomType, BigDecimal roomPrice, boolean isBooked, Blob photo,
-			List<BookedRoom> bookings) {
-		super();
-		this.id = id;
-		this.roomType = roomType;
-		this.roomPrice = roomPrice;
-		this.isBooked = isBooked;
-		this.photo = photo;
-		this.bookings = bookings;
-	}
+    
 	public Room() {
         this.bookings = new ArrayList<>();
     }
