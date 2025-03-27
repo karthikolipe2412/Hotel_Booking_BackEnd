@@ -20,12 +20,7 @@ public class BookingService implements IBookingService {
     private final BookingRepository bookingRepository;
     private final IRoomService roomService;
 
-    @Autowired
-    public BookingService(BookingRepository bookingRepository, IRoomService roomService) {
-		super();
-		this.bookingRepository = bookingRepository;
-		this.roomService = roomService;
-	}
+   
 
 
 	@Override
