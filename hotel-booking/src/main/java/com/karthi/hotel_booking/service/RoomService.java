@@ -23,11 +23,7 @@ import java.util.Optional;
 @RequiredArgsConstructor
 public class RoomService implements IRoomService {
     private final RoomRepository roomRepository;
-    @Autowired
-    public RoomService(RoomRepository roomRepository) {
-		super();
-		this.roomRepository = roomRepository;
-	}
+   
 
 	@Override
     public Room addNewRoom(MultipartFile file, String roomType, BigDecimal roomPrice) throws SQLException, IOException {
