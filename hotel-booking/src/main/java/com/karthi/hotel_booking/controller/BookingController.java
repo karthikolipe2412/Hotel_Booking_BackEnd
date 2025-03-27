@@ -26,12 +26,7 @@ import java.util.List;
 public class BookingController {
     private final IBookingService bookingService;
     private final IRoomService roomService;
-    @Autowired
-    public BookingController(IBookingService bookingService, IRoomService roomService) {
-		super();
-		this.bookingService = bookingService;
-		this.roomService = roomService;
-	}
+
 
 	@GetMapping("/all-bookings")
     @PreAuthorize("hasRole('ROLE_ADMIN')")
