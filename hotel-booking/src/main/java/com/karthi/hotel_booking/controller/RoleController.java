@@ -21,11 +21,7 @@ import static org.springframework.http.HttpStatus.FOUND;
 @RequiredArgsConstructor
 public class RoleController {
     private final IRoleService roleService;
-    @Autowired
-    public RoleController(IRoleService roleService) {
-		super();
-		this.roleService = roleService;
-	}
+   
 
 	@GetMapping("/all-roles")
     public ResponseEntity<List<Role>> getAllRoles(){
